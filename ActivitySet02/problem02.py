@@ -1,17 +1,18 @@
 
-def add(a, b):
-    pass  # ...
+def add():
+    a=int(input("Enter"))
+    b=int(input("Enter"))
+    return a,b
 
 
-def output(a, b, sum):
-    pass  # ...
+def output(a, b):
+    sum=a+b
+    print("sun of a and b is:",sum)
 
 
 def main():
-    a, b = input_two_numbers()
-    sum = add(a, b)
-
-    output(a, b, sum)
+    a,b=add()
+    output(a, b)
 
 
 if __name__ == '__main__':
