@@ -1,7 +1,10 @@
 
 
 class Menu:
-    """fill in class definition here"""
+    def __init__(self):
+      self.items=[]
+    def add(self,item,quan):
+      self.items.append((item,quan))
 
 
 m = Menu()  # Menu is a class

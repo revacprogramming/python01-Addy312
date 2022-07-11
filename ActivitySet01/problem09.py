@@ -1,3 +1,8 @@
-# Lists
+def filedata(text):
+    fhand=open(text)
+    output=(fhand.split(""))
+    return output
 
-filename = "dataset/romeo.txt"
+text='romeo.txt'
+a=filedata(text)
+print(a) 

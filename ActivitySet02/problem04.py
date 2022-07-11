@@ -1,26 +1,34 @@
-
-
 def get_cs():
-    cs=input("enter string")
-    return cs
-  
+    a = input("enter")
+    return a
+
+
 def cs_to_lot(cs):
-    """convert connected string to list of strings"""
+    d=''
+    c = []
+    d = cs.split(";")
+    for i in d:
+        c.append(tuple(i.split("=")))
+    return c
 
 
-def lot_to_cs(lot):
-    """convert list of strings to connected string"""
+def lot_to_cs(cs_to_lot):
+    for i in cs_to_lot:
+        b = "=".join(i)
+        print(b, end=';')
 
 
 def main():
-    cs=get_cs()
+    cs = get_cs()
 
-    lot=cs_to_lot(cs)  # convert connect string to list of tuples
-    print(lot)
-
-    cs=lot_to_cs(lot)  # convert list of strings to connect string
-    print(cs)
+    lot = cs_to_lot(cs)  # convert connect string to list of tuples
 
 
-if __name__ == '__main__':
+    lot_to_cs(lot)  # convert list of strings to connect string
+
+
+
+
+
+if _name_ == '_main_':
     main()

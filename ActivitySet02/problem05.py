@@ -1,15 +1,27 @@
-
-
 def get_cs():
-    """get string input"""
-
+    a = input("enter")
+    return a
+ 
+  
 
 def cs_to_dict(cs):
     """convert connect string to a dictionary"""
+    c = []
+    d = cs.split(";")
+    for i in d:
+        c.append(tuple(i.split("=")))
+    k=dict(c)
+    return k
 
 
 def dict_to_cs(d):
     """convert a dictionary to connect string"""
+    e=d.items()
+    f=list(e)
+    for i in f:
+        z="=".join(i)
+        print(z,end=';')
+    
 
 
 def main():
@@ -22,5 +34,5 @@ def main():
     print(cs)
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     main()
